@@ -45,6 +45,7 @@ public class CarParkSim {
         System.out.printf("The current time is %s.\n", clock.examine());
         System.out.println("Commands: tariffs, advance {minutes}, arrive, depart, quit.");
         System.out.print(">");
+
         String input = keyboard.next().toLowerCase();
         while (!input.equals("quit")) {
             if (input.equals("advance")) {
@@ -65,7 +66,6 @@ public class CarParkSim {
                     final Duration durationOfStay = ticket.age(clock.examine());
                     System.out.printf("Duration of stay: %s.\n", Duration.format(durationOfStay, "hour", "minute"));
                     String duration = Duration.format(durationOfStay, "hour", "minute");
-                    System.out.printf("Duration of stay: %s.\n", duration);
                     System.out.println("Cost of stay : " + ttable.getTariff(durationOfStay) + ".");
                 }
             } else if (input.equals("tariffs")) {
