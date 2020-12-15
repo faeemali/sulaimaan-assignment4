@@ -45,7 +45,7 @@ public class Register {
      * Create a new Register object.
      */
     public Register() {
-        Monitor.log("Register:Register()\n");
+        //Monitor.log("Register:Register()\n");
         this.tickets = new Ticket[100];
         this.numTickets = 0;
     }
